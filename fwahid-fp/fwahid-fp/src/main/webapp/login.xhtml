@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./WEB-INF/template/loginTemplate.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+    <ui:define name="title">
+        Login Page
+    </ui:define>
+
+    <ui:define name="content">
+        <h:form class="form-signin">
+            <img class="mb-4" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABIFBMVEX///8tf2cAsHxsqzbHf2IArnglfGMAsH8AsH0Aq3IAsnwue2UMdlsAc1gtfWbGfF5jpyRoqS/Ed1cceV9fpRqVwXQme2lnqSzo8O2St6ukwrjd6OW0zcVvqzH1+Perxr3z+O/K29U9h3FemIb69PGM07lrn47M4L41uYzu+vbU4t2Ms6be8upzzKxRkX3h6+jG6dy+2KyHuWB6sky04tGlyouKu2Rzr0Cz0ZzMi3Lj7tpZw5316ubD27LozsQhqn88sWyg28VisFIzm39XqjzY581Yl1gtjHM7s3Jas2SexoJGjWZenlhpqEySv3BfoFBMkl9jrJQwn33RmILetqfbr59grkuFs4iHz6p7p5g3qoZkxqIYimtGv5YAqWJLuH1lAu4kAAAKp0lEQVR4nO2d+1vaSBfHSUISwiUFg8VbEFEUrVi8Lda2i2hdqt1tu9r1fVvr+/7//8XOhACZC0m47VzWzw99ngp5er6eOWfOTOZME4lnnnnmX8rWu3fvtlgbMT+2viUXIG++SSryr4UXyR4LC99YGzMHtpILySELb6Rz41byRTLIi6RsEt+gAoHEN6xNmi3fFpI4csXiFikQSJRpnP5KVfgra7NmyD0ehV4k3rM2a4bQBAKJrM2aHdQwlCoQZVdYkV7hTiJBFZhMsrZsVpzKnksrmuzzYaV4nUjQFEozWVSKdCdK48JEJV9apESiNFGYSJTzWv6UWD5JtXjKa57Ee2SNL48HAS0NSFyEsehv1LxYkCcGPT4XgMRS6xxovIebbcl7ufQlEmcloFArFA+9v8lSqQXZyWse+aMKa1PmBJgQexTy71nbMieOC75Ead14lu8rBNF4xtqaeTAYpp4bj89Z2zMHFgsBiVK68TzoROjGCmuLZs5tCZHYnxslopLXUIq/lFnbNGN2ipjEkiZbwjnFvagVd1jbNGNuSYmyVTin+EDV4AaOVBwWC5jEfIW1TTPm/BgbqaXPrE2aOWeYG6Ubp2Bi/IxEY+EX1gbNgZ180I3FCmt75kDlKBCNeenKN4/AvFE4Ym3MfAjUcHnZ6lOf68FaoyhbeepzYrX6PpStOvVpqOn+pC/hgh+iqindV3jK2pa50LSAxJ4XS7esjZkLj7oKJH504XSxyNqYydl4tbm9Tv1kF7gQYN64IissH2Qdw3CUDcpnNV3tSbx0tYKoo7SsGIpHboX8UB0gcKY58AUqSnYZ/6yj9wWmLlxRZ4uVrDKA8KI+9KH5IGjpXXaUADk0FhsBhamPgq6B13IKIvF14LN9Sw1gfhC0Lt00EIlK4KN6UCCIxH1mRk5FGVXobA8+qemIQtXaZWjmNGyg4zS75v+8aakYwq4Plx3Ui0veT3d1XGCdsZ1TcIAMVOMA/qxs4gL1Gms7J2fJIcdpnXCh1WRt5xRgoeiUKQJVlbWVU/EK8aKxTRGod1gbOR3VQChmrkj/AYXCZtIew1C07bs0TaDgLgTVm1+AZ7omTaCaYm3g9HyHXswobao+sRNpn6phd9sqXaDIc+GQpZ/tNF2fqj6xNm4G7NfqI/WpZpW1edOx3+y8VS3KFD8Q2M2tsjZyQsrNTqOuW5YeIg8KtB1iB0cEmrW6ZYW5bihQUcQbps3HOOIA6bpiw2pcrGG6X0vFkwcE/rB7xThlL5Vbmk9x5anp1FXGDiwahWAMfWq6XbUHm3CCFN67j2PoM68ygTUj7a0Gf3TG0Jf6MXQgHKbfWRsfg/ITsXs2Ul8a1acIMV/sq/ETzI9qRsHILrEWEMVJTAem0+adQugDgbgW/W8wpRNLIJDX7mZsmxSoOK9YSwgnjkCwtmhfKVR5/AdixBDV9XQ61b7r2iPlwRmRtYgwyFcQPVJAG6xPnx5//lQylOBDUs0eaxmjIV9BpFIp0zSt//2/0TnZh6+UyivVrBGu0KGf1uCCJx3Tpn68uLn8UDpFXnluHIRrNPhNNf0s44lLQ22a6xa1Q6LS3NvOhWjkt/juHfoB4vSLm4eW68KzP8Vj+jnDvc0wP/7DhsemoQPf6ReXPXHeMcrW6DMHG9WRErOcLi92ddO6eRioA/q08Baf/xgjpgxe1/n/vXgYqtO0UmRb6E7p60uqRk4XUOfFgDxNKy5Wop6oFN0vCrVu47MyPQ62TJQKcQ79tDRX+/qSopDLLUWkXbIY73Ah7JN1v5AFHJ8TYrCtJ+5J9PewjcRtfcLdyOUy//2w5yX+HQl+O7eLj1QuFQZG6BiHQ/1fi/s7mlON7ehH/2l2Bi4cq5P3yM9O7h/cK+wn0kJhrGOFg5Z8t8W5wv79CKUxL0YIRG9QIodxeNrzRWncprPrQE9eazj5c7hT0xOYH7v5M3jBifvHIKPyN+NfFycT2P/VDDIqt1WbN0jzk/Rgt7SgxE/+OM1yV3lDO0sT9ScfIW3cLd+JOd52vWEmHTvJ9LhFFLq/+U6csYFTA3J+oTXZo6foHTXHnhONzdnaNz1g3i5VJnv0DFXofvISDXcvuluFiRt3D9ErI9zf4TDl70xNcfL7jzCFmjcncvfe4rw4ebsgrhBmU+PPWq3x+Nio1U6a+1zsupVvJzfjEI1DTQMKbVPvY1mW+bbWFLXBBIJlGuhD/OQw0KmbjSYXzpwAbLaA04VN9F9AmZb+VsyjtZ+xG4a+vMz8GHE0U7dMEU+At1CB7tdMd+TZU1W1zBPWBo8LfildK9Mdrc/T+CRYPF5jE/5v3VS4QlVXxQpH9OpE9/gqZIgO3ChSNJaDLnTdlh5DIJAo0HH+8w8uRPP+vLwwo4aogF5s6PA9/8Plzc1HNa4+KFGglFpXvbMaqVR8eZ5EYVqhV50RvUFRCNNHu2lkqP1rkYjSPAQ7Ske1sEUgSEN7Fe5Z2PZdmMbeGsrS1XrdNOummoaAHz+yNj4OK36zJdDYTpO9UFCbXn9b6zS942KruQyk2r26a5vptAhOLA/vOrEz1bt2Kg19NVj6qk+Nk2DKLPebpG1A984UIBK3kRNDdsbe3D/p1BqNRq3jn/JDKOfQr1+xsHksNrIKSsTbiiX0+xy+Y8RRcLLh39/Arpzg+IhmD7QxP8YrNexSjezr8K8zZxUfo5FNCFXKnRo8U8UFRsUVFrb87fxjLONjVMlFHO7Gbijivf9rNYcLjBp1e+gT3GdSYoxGvvZFb7bh+jg/hMijkS5cQZ/g7w0jygYxRqNc+Bp7IipoGVMm9EW6EBvVvEchfm9bdFjhT3Dev7dOzPVRPvmOhS1/B4oQXpMCI3yyjD1hcPeOGIXSZRF+jG0F/5VwPkbJiQIoDHtgHU+8Oe6OhCHs0cZomMlruECHv5OZCGQxEz577xECOZ/ryYI7/BBbGQ9a3hdNS5QxGroMwqpRxeFcIG2uD3UK7nLehyi59xQxRvF9gBznSYaaZrJh+0nY1Bmac7lgjVKuhQ079PuOwt15PgLSg4oRtheBeJD/EUosYj2zw5YUwe8bnPZcolDWTKH7ZYHvOwec7zt5kC50QtdMa8Pv5/hrMKFBxmD4Iijw3wxwn0M91sjNp9BF0GC/0RAgh3oQc2HEZlK/nDGqIoRggrJqihp6/m+E90p7yDZeQkckD3+vg/tCdAC+qIjcDlx3orMtV+Bb1pF7SZ7PxfEgkWei95IMoWKQWAblIksweCqB901DhFdInomxoQtSr6EIMk14oEEYI7pAfcDrDS5U0MkwdMXks+JwviuKgewCx3q3+V2QYrvPmEEI2BYpy6CZNOYMsMn3qwmc4HTvxDOd71e8BIFdUkGWeuMyHKS8v52ekMA+sCPSJB6f4da8pGN0GIa8H4KZmOGOklhTQGwGsyH3pwknZbDJJlaZMgb9opTzg1pT4O/sSjoVQrJjlWsCspQbY0khJH5FE3ooSGz8jU9ZZwrAci/RsDZjjvS2diUtSD16kwVrK+ZJVXYXlqV3IeyilDmR9t4DSrqy99nL8nhV5yzZcKRd+PqsORIvKjzWHP5u6pwtYIXP2oQ5sy7YS6TxWZd388Jn3WBtwbxZl32QJtYlz6Qgl0pdsUHkrmeeeeaZZ555Rkz+BtZs6PvNeoAOAAAAAElFTkSuQmCC" alt="" width="72" height="72"/>
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+            <h:outputLabel for="j_username" class="sr-only" value="Username"/>
+            <h:inputText binding="#{j_username}" 
+                         value="#{loginController.username}" 
+                         id="j_username" 
+                         styleClass="#{j_username.valid ? 'form-control' : 'form-control is-invalid'}"
+                         p:placeholder="Username" 
+                         p:autofocus="autofocus" />
+            <h:message for="j_username" errorClass="text-danger"/>
+
+            <h:outputLabel for="j_password" class="sr-only" value="Password"/>
+            <h:inputSecret binding="#{j_password}"
+                           value="#{loginController.password}" 
+                           id="j_password" 
+                           styleClass="#{j_password.valid ? 'form-control' : 'form-control is-invalid'}"
+                           p:placeholder="Password" />
+            <h:message for="j_password" errorClass="text-danger"/>
+
+            <h:commandButton class="btn btn-lg btn-primary btn-block" value="Sign in" action="#{loginController.doLogin()}"/>
+            <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+        </h:form>
+    </ui:define>
+
+</ui:composition>

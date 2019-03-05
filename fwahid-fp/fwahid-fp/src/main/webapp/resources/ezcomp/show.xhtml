@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+    <!-- INTERFACE -->
+    <cc:interface>
+        <cc:attribute name="show" required="true" type="edu.iit.sat.itmd4515.fwahid.domain.SportShow"/>
+        <cc:attribute name="readonly" type="java.lang.Boolean" required="false" default="true" />
+        <cc:attribute name="action" required="false" method-signature="java.lang.String action()" />
+    </cc:interface>
+
+    <!-- IMPLEMENTATION -->
+    <cc:implementation>
+        <h:form>
+            <h:panelGroup layout="block" class="form-group">
+                <h:outputLabel for="showId" value="Show ID #{cc.attrs.show.id}" />
+                <h:inputHidden class="form-control" id="showId" value="#{cc.attrs.show.id}" />
+                <h:message for="showId" errorClass="text-danger" />
+            </h:panelGroup>
+            <h:panelGroup layout="block" class="form-group">
+                <h:outputLabel for="showName" value="Show Name:" />
+                <h:inputText class="form-control" 
+                             id="showName" 
+                             value="#{cc.attrs.show.name}" 
+                             p:placeholder="Show Name"
+                             readonly="#{cc.attrs.readonly ? 'true' : 'false'}"/>
+                <h:message for="showName" errorClass="text-danger" />
+            </h:panelGroup>
+
+            <ui:fragment rendered="#{not cc.attrs.readonly}">
+                <h:panelGroup layout="block" class="form-group">
+                    <h:outputLabel for="showSRs" value="Select Sport Reporters:" />
+                    <h:selectManyListbox class="form-control" 
+                                         id="showSRs" 
+                                         converter="#{sportReporterConverter}"
+                                         readonly="#{cc.attrs.readonly ? 'true' : 'false'}"
+                                         value="#{cc.attrs.show.sportReporters}" >
+                        <f:selectItems value="#{sportReporterService.findAll()}"
+                                       var="sr"
+                                       itemLabel="#{sr.name}"
+                                       itemValue="#{sr}"/>
+                    </h:selectManyListbox>
+                    <h:message for="showSRs" errorClass="text-danger" />
+                </h:panelGroup>
+            </ui:fragment>
+            
+            <ui:fragment rendered="#{cc.attrs.readonly}">
+                <h:outputLabel value="Show SRs: "/>
+                <h:outputText value=" #{sportReporterController.getShowSportReportersFormatted(cc.attrs.show)}" />
+            </ui:fragment>
+
+            <ui:fragment rendered="#{not cc.attrs.readonly}">
+                <h:commandButton class="btn btn-primary" action="#{cc.attrs.action}" value="Save" />
+            </ui:fragment>
+        </h:form>
+    </cc:implementation>
+</html>
